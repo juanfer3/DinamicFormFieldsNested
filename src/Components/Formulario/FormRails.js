@@ -4,6 +4,10 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Form, Text, NestedField } from 'react-form';
 
+
+/**Models */
+import Evento from '../../Models/Evento';
+
 class Formrails extends Component {
     constructor(props) {
         super(props);
@@ -72,25 +76,21 @@ class Formrails extends Component {
         let taskDOM = (
           <div className="task-form" key={index}>
             <div className="form-group">
-              <div className="clearfix" style={{ marginBottom: 5 }}>
-                <label>
-                  Task {counter + 1}
-                </label>
-                <button
-                  className="btn btn-danger"
-                  style={{ padding: '5px 10px', float: 'right' }}
-                  onClick={e => this.handleRemoveTask(task)}
-                  >
-                  X
-                </button>
-              </div>
-              <input
-                placeholder="Title"
+
+              <TextField
+                id="standard-name"
+                label="Title"
                 onChange={event => this.onTaskTitleChange(event, task)}
-                type="text"
-                value={task.title}
-                className="form-control"
-              />
+                margin="normal"
+                />
+
+
+              <Button 
+              onClick={e => this.handleRemoveTask(task)}
+              variant="contained" 
+              color="primary">
+                Hello World
+              </Button>
   
             </div>
           </div>
@@ -135,7 +135,8 @@ class Formrails extends Component {
 
 
        
-                    onClick={this.handleFormSubmit()}
+                    onClick={()=>this.handleFormSubmit()}
+                    
                     className="btn btn-primary">
                     Save
                     </Button>

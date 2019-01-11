@@ -10,7 +10,7 @@ class Navbar extends Component {
                 <AppBar position="static" >
                      <Toolbar >
                         <Typography variant="title" color="inherit">
-                            React & Material-UI Sample Application
+                            Asiste
                         </Typography>
                      </Toolbar>
                 </AppBar>
